@@ -8,8 +8,8 @@ WITH statuses AS (
 
 SELECT
     status,
-    COUNT(1) count
+    SUM(IF(order_id IS NOT NULL, 1, 0)) count
 FROM {{ ref('orders') }}
     RIGHT JOIN statuses USING(status)
 GROUP BY status
-HAVING count == 0
+HAVING count = 0
