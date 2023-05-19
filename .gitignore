@@ -1,0 +1,8 @@
+
+target/
+dbt_modules/
+logs/
+**/.DS_Store
+uncommitted/
+dbt_packages/
+.user.yml
