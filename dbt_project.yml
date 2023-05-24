@@ -25,3 +25,8 @@ models:
       staging:
         materialized: view
 
+seeds:
+  jaffle_shop:
+    raw_orders:
+      +column_types:
+        id: varchar
